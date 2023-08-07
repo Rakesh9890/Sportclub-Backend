@@ -1,0 +1,59 @@
+2023-08-02 15:03:16.757 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:55225/api/Booking/savebookingdetail application/json 153
+2023-08-02 15:03:16.783 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:03:16.783 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.BookingController.SaveBookingDetail (SportsClubUser)'
+2023-08-02 15:03:16.783 +05:30 [INF] Route matched with {action = "SaveBookingDetail", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveBookingDetail(Models.BookingDetails) on controller SportClubProject.UserControllers.BookingController (SportsClubUser).
+2023-08-02 15:03:16.784 +05:30 [INF] entered save booking detail method in booking controller
+2023-08-02 15:03:16.784 +05:30 [INF] entered into save booking method in booking repository implementation
+2023-08-02 15:03:16.796 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BookingDetails] ([Bookingdate], [CourtName], [SlotTime], [SportName], [UserId])
+OUTPUT INSERTED.[BookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2023-08-02 15:03:16.797 +05:30 [INF] Executing OkObjectResult, writing value of type 'Models.BookingDetails'.
+2023-08-02 15:03:16.800 +05:30 [INF] Executed action SportClubProject.UserControllers.BookingController.SaveBookingDetail (SportsClubUser) in 15.6199ms
+2023-08-02 15:03:16.800 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.BookingController.SaveBookingDetail (SportsClubUser)'
+2023-08-02 15:03:16.800 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:55225/api/Booking/savebookingdetail application/json 153 - 200 - application/json;+charset=utf-8 42.6302ms
+2023-08-02 15:03:21.202 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:55225/api/Booking/savebookingdetail application/json 153
+2023-08-02 15:03:21.203 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:03:21.203 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.BookingController.SaveBookingDetail (SportsClubUser)'
+2023-08-02 15:03:21.203 +05:30 [INF] Route matched with {action = "SaveBookingDetail", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveBookingDetail(Models.BookingDetails) on controller SportClubProject.UserControllers.BookingController (SportsClubUser).
+2023-08-02 15:03:21.203 +05:30 [INF] entered save booking detail method in booking controller
+2023-08-02 15:03:21.203 +05:30 [INF] entered into save booking method in booking repository implementation
+2023-08-02 15:03:21.209 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BookingDetails] ([Bookingdate], [CourtName], [SlotTime], [SportName], [UserId])
+OUTPUT INSERTED.[BookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2023-08-02 15:03:21.209 +05:30 [INF] Executing OkObjectResult, writing value of type 'Models.BookingDetails'.
+2023-08-02 15:03:21.209 +05:30 [INF] Executed action SportClubProject.UserControllers.BookingController.SaveBookingDetail (SportsClubUser) in 6.6962ms
+2023-08-02 15:03:21.210 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.BookingController.SaveBookingDetail (SportsClubUser)'
+2023-08-02 15:03:21.210 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:55225/api/Booking/savebookingdetail application/json 153 - 200 - application/json;+charset=utf-8 7.3084ms
+2023-08-02 15:03:26.985 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:55225/api/Booking/savebookingdetail application/json 153
+2023-08-02 15:03:26.985 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:03:26.985 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.BookingController.SaveBookingDetail (SportsClubUser)'
+2023-08-02 15:03:26.985 +05:30 [INF] Route matched with {action = "SaveBookingDetail", controller = "Booking"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveBookingDetail(Models.BookingDetails) on controller SportClubProject.UserControllers.BookingController (SportsClubUser).
+2023-08-02 15:03:26.986 +05:30 [INF] entered save booking detail method in booking controller
+2023-08-02 15:03:26.986 +05:30 [INF] entered into save booking method in booking repository implementation
+2023-08-02 15:03:26.991 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BookingDetails] ([Bookingdate], [CourtName], [SlotTime], [SportName], [UserId])
+OUTPUT INSERTED.[BookingId]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2023-08-02 15:03:26.991 +05:30 [INF] Executing OkObjectResult, writing value of type 'Models.BookingDetails'.
+2023-08-02 15:03:26.992 +05:30 [INF] Executed action SportClubProject.UserControllers.BookingController.SaveBookingDetail (SportsClubUser) in 6.9029ms
+2023-08-02 15:03:26.993 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.BookingController.SaveBookingDetail (SportsClubUser)'
+2023-08-02 15:03:26.993 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:55225/api/Booking/savebookingdetail application/json 153 - 200 - application/json;+charset=utf-8 8.2285ms
+2023-08-02 15:03:50.306 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/getpayment - -
+2023-08-02 15:03:50.335 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:03:50.335 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.PaymentController.GetPayment (SportsClubUser)'
+2023-08-02 15:03:50.336 +05:30 [INF] Route matched with {action = "GetPayment", controller = "Payment"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Payment] GetPayment() on controller SportClubProject.UserControllers.PaymentController (SportsClubUser).
+2023-08-02 15:03:50.340 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PaymentId], [p].[Amount], [p].[PaymentMode], [p].[Status], [p].[UserId]
+FROM [payments] AS [p]
+2023-08-02 15:03:50.341 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Payment, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 15:03:50.341 +05:30 [INF] Executed action SportClubProject.UserControllers.PaymentController.GetPayment (SportsClubUser) in 5.7184ms
+2023-08-02 15:03:50.342 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.PaymentController.GetPayment (SportsClubUser)'
+2023-08-02 15:03:50.343 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/getpayment - - - 200 - application/json;+charset=utf-8 37.2660ms

@@ -1,0 +1,11 @@
+2023-08-02 15:31:50.464 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/getpayment - -
+2023-08-02 15:31:50.471 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:31:50.471 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.PaymentController.GetPayment (SportsClubUser)'
+2023-08-02 15:31:50.471 +05:30 [INF] Route matched with {action = "GetPayment", controller = "Payment"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Payment] GetPayment() on controller SportClubProject.UserControllers.PaymentController (SportsClubUser).
+2023-08-02 15:31:50.532 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PaymentId], [p].[Amount], [p].[PaymentMode], [p].[Status], [p].[UserId]
+FROM [payments] AS [p]
+2023-08-02 15:31:50.534 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Payment, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 15:31:50.535 +05:30 [INF] Executed action SportClubProject.UserControllers.PaymentController.GetPayment (SportsClubUser) in 62.7855ms
+2023-08-02 15:31:50.535 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.PaymentController.GetPayment (SportsClubUser)'
+2023-08-02 15:31:50.535 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/getpayment - - - 200 - application/json;+charset=utf-8 76.9183ms

@@ -1,0 +1,112 @@
+2023-08-02 14:55:09.783 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:55225/savepayment application/json 99
+2023-08-02 14:55:09.810 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:55:09.811 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:09.811 +05:30 [INF] Route matched with {action = "SavePayment", controller = "Payment"}. Executing controller action with signature Models.Payment SavePayment(Models.Payment) on controller SportClubProject.UserControllers.PaymentController (SportsClubUser).
+2023-08-02 14:55:09.817 +05:30 [INF] entered into save payment method in payment controller
+2023-08-02 14:55:09.817 +05:30 [INF] entered into save payment details in payment repo impl
+2023-08-02 14:55:09.821 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Double), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [payments] ([Amount], [PaymentMode], [Status], [UserId])
+OUTPUT INSERTED.[PaymentId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-02 14:55:09.821 +05:30 [INF] Executing ObjectResult, writing value of type 'Models.Payment'.
+2023-08-02 14:55:09.822 +05:30 [INF] Executed action SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser) in 4.8446ms
+2023-08-02 14:55:09.822 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:09.822 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:55225/savepayment application/json 99 - 200 - application/json;+charset=utf-8 38.8914ms
+2023-08-02 14:55:19.969 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:55225/savepayment application/json 99
+2023-08-02 14:55:19.970 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:55:19.970 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:19.970 +05:30 [INF] Route matched with {action = "SavePayment", controller = "Payment"}. Executing controller action with signature Models.Payment SavePayment(Models.Payment) on controller SportClubProject.UserControllers.PaymentController (SportsClubUser).
+2023-08-02 14:55:19.970 +05:30 [INF] entered into save payment method in payment controller
+2023-08-02 14:55:19.970 +05:30 [INF] entered into save payment details in payment repo impl
+2023-08-02 14:55:19.980 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Double), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [payments] ([Amount], [PaymentMode], [Status], [UserId])
+OUTPUT INSERTED.[PaymentId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-02 14:55:19.980 +05:30 [INF] Executing ObjectResult, writing value of type 'Models.Payment'.
+2023-08-02 14:55:19.981 +05:30 [INF] Executed action SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser) in 10.8942ms
+2023-08-02 14:55:19.981 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:19.981 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:55225/savepayment application/json 99 - 200 - application/json;+charset=utf-8 11.8114ms
+2023-08-02 14:55:32.648 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:55225/savepayment application/json 99
+2023-08-02 14:55:32.648 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:55:32.648 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:32.650 +05:30 [INF] Route matched with {action = "SavePayment", controller = "Payment"}. Executing controller action with signature Models.Payment SavePayment(Models.Payment) on controller SportClubProject.UserControllers.PaymentController (SportsClubUser).
+2023-08-02 14:55:32.650 +05:30 [INF] entered into save payment method in payment controller
+2023-08-02 14:55:32.650 +05:30 [INF] entered into save payment details in payment repo impl
+2023-08-02 14:55:32.656 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Double), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [payments] ([Amount], [PaymentMode], [Status], [UserId])
+OUTPUT INSERTED.[PaymentId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-02 14:55:32.656 +05:30 [INF] Executing ObjectResult, writing value of type 'Models.Payment'.
+2023-08-02 14:55:32.657 +05:30 [INF] Executed action SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser) in 6.9091ms
+2023-08-02 14:55:32.657 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:32.657 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:55225/savepayment application/json 99 - 200 - application/json;+charset=utf-8 9.9226ms
+2023-08-02 14:55:36.173 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:55225/savepayment application/json 99
+2023-08-02 14:55:36.174 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:55:36.174 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:36.174 +05:30 [INF] Route matched with {action = "SavePayment", controller = "Payment"}. Executing controller action with signature Models.Payment SavePayment(Models.Payment) on controller SportClubProject.UserControllers.PaymentController (SportsClubUser).
+2023-08-02 14:55:36.174 +05:30 [INF] entered into save payment method in payment controller
+2023-08-02 14:55:36.175 +05:30 [INF] entered into save payment details in payment repo impl
+2023-08-02 14:55:36.182 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Double), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [payments] ([Amount], [PaymentMode], [Status], [UserId])
+OUTPUT INSERTED.[PaymentId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-02 14:55:36.182 +05:30 [INF] Executing ObjectResult, writing value of type 'Models.Payment'.
+2023-08-02 14:55:36.183 +05:30 [INF] Executed action SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser) in 9.5127ms
+2023-08-02 14:55:36.183 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:36.184 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:55225/savepayment application/json 99 - 200 - application/json;+charset=utf-8 10.5024ms
+2023-08-02 14:55:41.824 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:55225/savepayment application/json 99
+2023-08-02 14:55:41.824 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:55:41.825 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:41.825 +05:30 [INF] Route matched with {action = "SavePayment", controller = "Payment"}. Executing controller action with signature Models.Payment SavePayment(Models.Payment) on controller SportClubProject.UserControllers.PaymentController (SportsClubUser).
+2023-08-02 14:55:41.825 +05:30 [INF] entered into save payment method in payment controller
+2023-08-02 14:55:41.826 +05:30 [INF] entered into save payment details in payment repo impl
+2023-08-02 14:55:41.840 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Double), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [payments] ([Amount], [PaymentMode], [Status], [UserId])
+OUTPUT INSERTED.[PaymentId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-02 14:55:41.841 +05:30 [INF] Executing ObjectResult, writing value of type 'Models.Payment'.
+2023-08-02 14:55:41.845 +05:30 [INF] Executed action SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser) in 19.7823ms
+2023-08-02 14:55:41.846 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:41.847 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:55225/savepayment application/json 99 - 200 - application/json;+charset=utf-8 23.3925ms
+2023-08-02 14:55:46.712 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:55225/savepayment application/json 99
+2023-08-02 14:55:46.712 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:55:46.712 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:46.712 +05:30 [INF] Route matched with {action = "SavePayment", controller = "Payment"}. Executing controller action with signature Models.Payment SavePayment(Models.Payment) on controller SportClubProject.UserControllers.PaymentController (SportsClubUser).
+2023-08-02 14:55:46.713 +05:30 [INF] entered into save payment method in payment controller
+2023-08-02 14:55:46.713 +05:30 [INF] entered into save payment details in payment repo impl
+2023-08-02 14:55:46.724 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Double), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [payments] ([Amount], [PaymentMode], [Status], [UserId])
+OUTPUT INSERTED.[PaymentId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-02 14:55:46.724 +05:30 [INF] Executing ObjectResult, writing value of type 'Models.Payment'.
+2023-08-02 14:55:46.726 +05:30 [INF] Executed action SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser) in 13.0107ms
+2023-08-02 14:55:46.726 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:46.726 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:55225/savepayment application/json 99 - 200 - application/json;+charset=utf-8 13.8837ms
+2023-08-02 14:55:50.919 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:55225/savepayment application/json 99
+2023-08-02 14:55:50.919 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:55:50.919 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:50.920 +05:30 [INF] Route matched with {action = "SavePayment", controller = "Payment"}. Executing controller action with signature Models.Payment SavePayment(Models.Payment) on controller SportClubProject.UserControllers.PaymentController (SportsClubUser).
+2023-08-02 14:55:50.920 +05:30 [INF] entered into save payment method in payment controller
+2023-08-02 14:55:50.920 +05:30 [INF] entered into save payment details in payment repo impl
+2023-08-02 14:55:50.933 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Double), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [payments] ([Amount], [PaymentMode], [Status], [UserId])
+OUTPUT INSERTED.[PaymentId]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-02 14:55:50.933 +05:30 [INF] Executing ObjectResult, writing value of type 'Models.Payment'.
+2023-08-02 14:55:50.934 +05:30 [INF] Executed action SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser) in 14.3633ms
+2023-08-02 14:55:50.934 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.PaymentController.SavePayment (SportsClubUser)'
+2023-08-02 14:55:50.934 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:55225/savepayment application/json 99 - 200 - application/json;+charset=utf-8 15.3524ms

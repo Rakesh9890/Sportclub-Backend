@@ -1,0 +1,6 @@
+2023-08-02 15:13:39.923 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/api/Sports/getsportbystadiumid?stadiumId=1 - -
+2023-08-02 15:13:39.927 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:13:39.962 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/api/Sports/getsportbystadiumid?stadiumId=1 - - - 404 - - 42.9243ms
+2023-08-02 15:13:53.793 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/api/Sports/getsportbystadiumid?stadiumId=1 - -
+2023-08-02 15:13:53.793 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:13:53.795 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/api/Sports/getsportbystadiumid?stadiumId=1 - - - 404 - - 1.8157ms

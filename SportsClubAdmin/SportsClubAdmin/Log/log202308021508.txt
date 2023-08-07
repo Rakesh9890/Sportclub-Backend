@@ -1,0 +1,42 @@
+2023-08-02 15:08:57.648 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:10697/api/Auth/login - -
+2023-08-02 15:08:57.652 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:08:57.654 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 4.6293 ms
+2023-08-02 15:08:57.660 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:10697/api/Auth/login - - - 204 - - 12.6893ms
+2023-08-02 15:08:57.666 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:10697/api/Auth/login application/json 47
+2023-08-02 15:08:57.671 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:08:57.672 +05:30 [INF] Executing endpoint 'SportsTime365.Authentication.Controller.AuthController.Login (SportsClubAdmin)'
+2023-08-02 15:08:57.684 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(SportsTime365.Authentication.DTO.LoginDto) on controller SportsTime365.Authentication.Controller.AuthController (SportsClubAdmin).
+2023-08-02 15:08:57.728 +05:30 [INF] 
+2023-08-02 15:08:57.855 +05:30 [INF] Executed DbCommand (89ms) [Parameters=[@__Emial_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[Email], [u].[Gender], [u].[Password], [u].[Role], [u].[UserAge], [u].[UserMobile], [u].[UserName]
+FROM [UserDetails] AS [u]
+WHERE [u].[Email] = @__Emial_0 AND [u].[Password] = @__password_1
+2023-08-02 15:08:58.039 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-02 15:08:58.045 +05:30 [INF] Executed action SportsTime365.Authentication.Controller.AuthController.Login (SportsClubAdmin) in 360.5785ms
+2023-08-02 15:08:58.045 +05:30 [INF] Executed endpoint 'SportsTime365.Authentication.Controller.AuthController.Login (SportsClubAdmin)'
+2023-08-02 15:08:58.045 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 378.5768 ms
+2023-08-02 15:08:58.045 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:10697/api/Auth/login application/json 47 - 200 - application/json;+charset=utf-8 379.8016ms
+2023-08-02 15:08:58.079 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:10697/api/Stadium/getallstadiums - -
+2023-08-02 15:08:58.079 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:08:58.079 +05:30 [INF] HTTP OPTIONS /api/Stadium/getallstadiums responded 204 in 0.1655 ms
+2023-08-02 15:08:58.079 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:10697/api/Stadium/getallstadiums - - - 204 - - 0.5696ms
+2023-08-02 15:08:58.082 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - -
+2023-08-02 15:08:58.082 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:08:58.367 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 15:08:58.367 +05:30 [INF] Route matched with {action = "GetAllStadiums", controller = "Stadium"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Stadiums] GetAllStadiums() on controller SportClubProject.AdminController.StadiumController (SportsClubAdmin).
+2023-08-02 15:08:58.367 +05:30 [INF] entered into get all stadiums method
+2023-08-02 15:08:58.367 +05:30 [INF] entered into get all stadiums method in stadium repository impl
+2023-08-02 15:08:58.385 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StadiumId], [s].[Location], [s].[StadiumName], [t].[SportId], [t].[SportImageUrl], [t].[SportName], [t].[StadiumsStadiumId], [t].[Status], [t].[CourtId], [t].[CourtImageUrl], [t].[CourtName], [t].[CourtPrice], [t].[SportsSportId], [t].[Status0], [t].[category]
+FROM [Stadiums] AS [s]
+LEFT JOIN (
+    SELECT [s0].[SportId], [s0].[SportImageUrl], [s0].[SportName], [s0].[StadiumsStadiumId], [s0].[Status], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status] AS [Status0], [c].[category]
+    FROM [Sports] AS [s0]
+    LEFT JOIN [Courts] AS [c] ON [s0].[SportId] = [c].[SportsSportId]
+) AS [t] ON [s].[StadiumId] = [t].[StadiumsStadiumId]
+ORDER BY [s].[StadiumId], [t].[SportId]
+2023-08-02 15:08:58.386 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Stadiums, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 15:08:58.391 +05:30 [INF] Executed action SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin) in 23.5885ms
+2023-08-02 15:08:58.391 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 15:08:58.391 +05:30 [INF] HTTP GET /api/Stadium/getallstadiums responded 200 in 308.6165 ms
+2023-08-02 15:08:58.391 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - - - 200 - application/json;+charset=utf-8 308.9301ms

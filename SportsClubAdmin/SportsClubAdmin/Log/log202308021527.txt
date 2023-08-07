@@ -1,0 +1,44 @@
+2023-08-02 15:27:15.869 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:10697/api/Courts/savecourtbysportid?sportId=4 - -
+2023-08-02 15:27:15.882 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:27:15.882 +05:30 [INF] HTTP OPTIONS /api/Courts/savecourtbysportid responded 204 in 1.3504 ms
+2023-08-02 15:27:15.882 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:10697/api/Courts/savecourtbysportid?sportId=4 - - - 204 - - 13.7373ms
+2023-08-02 15:27:15.885 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:10697/api/Courts/savecourtbysportid?sportId=4 application/json 209
+2023-08-02 15:27:15.886 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:27:15.886 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.CourtsController.SaveCourtBySportId (SportsClubAdmin)'
+2023-08-02 15:27:15.889 +05:30 [INF] Route matched with {action = "SaveCourtBySportId", controller = "Courts"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SaveCourtBySportId(Int32, Models.Courts) on controller SportClubProject.AdminController.CourtsController (SportsClubAdmin).
+2023-08-02 15:27:15.894 +05:30 [INF] entered into save court by sport id method
+2023-08-02 15:27:15.896 +05:30 [INF] entered save court by sport id
+2023-08-02 15:27:15.919 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__sportId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[SportId], [t].[SportImageUrl], [t].[SportName], [t].[StadiumsStadiumId], [t].[Status], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status], [c].[category]
+FROM (
+    SELECT TOP(1) [s].[SportId], [s].[SportImageUrl], [s].[SportName], [s].[StadiumsStadiumId], [s].[Status]
+    FROM [Sports] AS [s]
+    WHERE [s].[SportId] = @__sportId_0
+) AS [t]
+LEFT JOIN [Courts] AS [c] ON [t].[SportId] = [c].[SportsSportId]
+ORDER BY [t].[SportId]
+2023-08-02 15:27:15.927 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Double), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courts] ([CourtImageUrl], [CourtName], [CourtPrice], [SportsSportId], [Status], [category])
+OUTPUT INSERTED.[CourtId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-08-02 15:27:15.927 +05:30 [INF] Executing OkObjectResult, writing value of type 'Models.Courts'.
+2023-08-02 15:27:15.927 +05:30 [INF] Executed action SportClubProject.AdminController.CourtsController.SaveCourtBySportId (SportsClubAdmin) in 37.8947ms
+2023-08-02 15:27:15.927 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.CourtsController.SaveCourtBySportId (SportsClubAdmin)'
+2023-08-02 15:27:15.928 +05:30 [INF] HTTP POST /api/Courts/savecourtbysportid responded 200 in 41.5568 ms
+2023-08-02 15:27:15.928 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:10697/api/Courts/savecourtbysportid?sportId=4 application/json 209 - 200 - application/json;+charset=utf-8 42.3316ms
+2023-08-02 15:27:24.201 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getusers - -
+2023-08-02 15:27:24.201 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:27:24.201 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetUserDetails (SportsClubAdmin)'
+2023-08-02 15:27:24.201 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.UserDetails] GetUserDetails() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 15:27:24.201 +05:30 [INF] enterd get user details method
+2023-08-02 15:27:24.201 +05:30 [INF] entered into get user details method in dash board repo impl
+2023-08-02 15:27:24.205 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[Gender], [u].[Password], [u].[Role], [u].[UserAge], [u].[UserMobile], [u].[UserName]
+FROM [UserDetails] AS [u]
+2023-08-02 15:27:24.206 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.UserDetails, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 15:27:24.209 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetUserDetails (SportsClubAdmin) in 7.591ms
+2023-08-02 15:27:24.209 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetUserDetails (SportsClubAdmin)'
+2023-08-02 15:27:24.209 +05:30 [INF] HTTP GET /api/DashBoard/getusers responded 200 in 7.9825 ms
+2023-08-02 15:27:24.209 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getusers - - - 200 - application/json;+charset=utf-8 8.2856ms

@@ -1,0 +1,48 @@
+D:\SportsBackend7\Models\bin\Debug\net6.0\Models.deps.json
+D:\SportsBackend7\Models\bin\Debug\net6.0\Models.dll
+D:\SportsBackend7\Models\bin\Debug\net6.0\Models.pdb
+D:\SportsBackend7\Models\obj\Debug\net6.0\Models.csproj.AssemblyReference.cache
+D:\SportsBackend7\Models\obj\Debug\net6.0\Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\SportsBackend7\Models\obj\Debug\net6.0\Models.AssemblyInfoInputs.cache
+D:\SportsBackend7\Models\obj\Debug\net6.0\Models.AssemblyInfo.cs
+D:\SportsBackend7\Models\obj\Debug\net6.0\Models.csproj.CoreCompileInputs.cache
+D:\SportsBackend7\Models\obj\Debug\net6.0\Models.dll
+D:\SportsBackend7\Models\obj\Debug\net6.0\refint\Models.dll
+D:\SportsBackend7\Models\obj\Debug\net6.0\Models.pdb
+D:\SportsBackend7\Models\obj\Debug\net6.0\ref\Models.dll
+C:\Users\KARTHIK RUDRA\Documents\.NET-PRACTICE\SPORTSCLUB PROJECT\Models\bin\Debug\net6.0\Models.deps.json
+C:\Users\KARTHIK RUDRA\Documents\.NET-PRACTICE\SPORTSCLUB PROJECT\Models\bin\Debug\net6.0\Models.dll
+C:\Users\KARTHIK RUDRA\Documents\.NET-PRACTICE\SPORTSCLUB PROJECT\Models\bin\Debug\net6.0\Models.pdb
+C:\Users\KARTHIK RUDRA\Documents\.NET-PRACTICE\SPORTSCLUB PROJECT\Models\obj\Debug\net6.0\Models.csproj.AssemblyReference.cache
+C:\Users\KARTHIK RUDRA\Documents\.NET-PRACTICE\SPORTSCLUB PROJECT\Models\obj\Debug\net6.0\Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KARTHIK RUDRA\Documents\.NET-PRACTICE\SPORTSCLUB PROJECT\Models\obj\Debug\net6.0\Models.AssemblyInfoInputs.cache
+C:\Users\KARTHIK RUDRA\Documents\.NET-PRACTICE\SPORTSCLUB PROJECT\Models\obj\Debug\net6.0\Models.AssemblyInfo.cs
+C:\Users\KARTHIK RUDRA\Documents\.NET-PRACTICE\SPORTSCLUB PROJECT\Models\obj\Debug\net6.0\Models.csproj.CoreCompileInputs.cache
+C:\Users\KARTHIK RUDRA\Documents\.NET-PRACTICE\SPORTSCLUB PROJECT\Models\obj\Debug\net6.0\Models.dll
+C:\Users\KARTHIK RUDRA\Documents\.NET-PRACTICE\SPORTSCLUB PROJECT\Models\obj\Debug\net6.0\refint\Models.dll
+C:\Users\KARTHIK RUDRA\Documents\.NET-PRACTICE\SPORTSCLUB PROJECT\Models\obj\Debug\net6.0\Models.pdb
+C:\Users\KARTHIK RUDRA\Documents\.NET-PRACTICE\SPORTSCLUB PROJECT\Models\obj\Debug\net6.0\ref\Models.dll
+C:\Users\kakar\Downloads\Models\bin\Debug\net6.0\Models.deps.json
+C:\Users\kakar\Downloads\Models\bin\Debug\net6.0\Models.dll
+C:\Users\kakar\Downloads\Models\bin\Debug\net6.0\Models.pdb
+C:\Users\kakar\Downloads\Models\obj\Debug\net6.0\Models.csproj.AssemblyReference.cache
+C:\Users\kakar\Downloads\Models\obj\Debug\net6.0\Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kakar\Downloads\Models\obj\Debug\net6.0\Models.AssemblyInfoInputs.cache
+C:\Users\kakar\Downloads\Models\obj\Debug\net6.0\Models.AssemblyInfo.cs
+C:\Users\kakar\Downloads\Models\obj\Debug\net6.0\Models.csproj.CoreCompileInputs.cache
+C:\Users\kakar\Downloads\Models\obj\Debug\net6.0\Models.dll
+C:\Users\kakar\Downloads\Models\obj\Debug\net6.0\refint\Models.dll
+C:\Users\kakar\Downloads\Models\obj\Debug\net6.0\Models.pdb
+C:\Users\kakar\Downloads\Models\obj\Debug\net6.0\ref\Models.dll
+C:\Users\shiva\source\repos\SportsClub\SportClubLatest\Models\bin\Debug\net6.0\Models.deps.json
+C:\Users\shiva\source\repos\SportsClub\SportClubLatest\Models\bin\Debug\net6.0\Models.dll
+C:\Users\shiva\source\repos\SportsClub\SportClubLatest\Models\bin\Debug\net6.0\Models.pdb
+C:\Users\shiva\source\repos\SportsClub\SportClubLatest\Models\obj\Debug\net6.0\Models.csproj.AssemblyReference.cache
+C:\Users\shiva\source\repos\SportsClub\SportClubLatest\Models\obj\Debug\net6.0\Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\shiva\source\repos\SportsClub\SportClubLatest\Models\obj\Debug\net6.0\Models.AssemblyInfoInputs.cache
+C:\Users\shiva\source\repos\SportsClub\SportClubLatest\Models\obj\Debug\net6.0\Models.AssemblyInfo.cs
+C:\Users\shiva\source\repos\SportsClub\SportClubLatest\Models\obj\Debug\net6.0\Models.csproj.CoreCompileInputs.cache
+C:\Users\shiva\source\repos\SportsClub\SportClubLatest\Models\obj\Debug\net6.0\Models.dll
+C:\Users\shiva\source\repos\SportsClub\SportClubLatest\Models\obj\Debug\net6.0\refint\Models.dll
+C:\Users\shiva\source\repos\SportsClub\SportClubLatest\Models\obj\Debug\net6.0\Models.pdb
+C:\Users\shiva\source\repos\SportsClub\SportClubLatest\Models\obj\Debug\net6.0\ref\Models.dll

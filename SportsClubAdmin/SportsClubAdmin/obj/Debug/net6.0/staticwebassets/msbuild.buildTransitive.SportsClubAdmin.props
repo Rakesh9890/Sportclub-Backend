@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\SportsClubAdmin.props" />
+</Project>

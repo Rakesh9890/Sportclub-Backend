@@ -1,0 +1,88 @@
+2023-08-02 14:19:41.234 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:10697/api/Stadium/getallstadiums - -
+2023-08-02 14:19:41.248 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:10697/api/Stadium/getallstadiums - -
+2023-08-02 14:19:41.345 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:19:41.345 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:19:41.394 +05:30 [INF] HTTP OPTIONS /api/Stadium/getallstadiums responded 204 in 65.1996 ms
+2023-08-02 14:19:41.394 +05:30 [INF] HTTP OPTIONS /api/Stadium/getallstadiums responded 204 in 65.1974 ms
+2023-08-02 14:19:41.410 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:10697/api/Stadium/getallstadiums - - - 204 - - 201.5155ms
+2023-08-02 14:19:41.411 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:10697/api/Stadium/getallstadiums - - - 204 - - 200.2288ms
+2023-08-02 14:19:41.412 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - -
+2023-08-02 14:19:41.414 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:19:42.253 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-08-2023 04:56:29', Current time (UTC): '02-08-2023 08:49:42'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-08-02 14:19:42.508 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-08-2023 04:56:29', Current time (UTC): '02-08-2023 08:49:42'.
+2023-08-02 14:19:42.510 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 14:19:42.516 +05:30 [INF] Route matched with {action = "GetAllStadiums", controller = "Stadium"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Stadiums] GetAllStadiums() on controller SportClubProject.AdminController.StadiumController (SportsClubAdmin).
+2023-08-02 14:19:42.528 +05:30 [INF] entered into get all stadiums method
+2023-08-02 14:19:42.528 +05:30 [INF] entered into get all stadiums method in stadium repository impl
+2023-08-02 14:19:43.064 +05:30 [INF] Executed DbCommand (457ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StadiumId], [s].[Location], [s].[StadiumName], [t].[SportId], [t].[SportImageUrl], [t].[SportName], [t].[StadiumsStadiumId], [t].[Status], [t].[CourtId], [t].[CourtImageUrl], [t].[CourtName], [t].[CourtPrice], [t].[SportsSportId], [t].[Status0], [t].[category]
+FROM [Stadiums] AS [s]
+LEFT JOIN (
+    SELECT [s0].[SportId], [s0].[SportImageUrl], [s0].[SportName], [s0].[StadiumsStadiumId], [s0].[Status], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status] AS [Status0], [c].[category]
+    FROM [Sports] AS [s0]
+    LEFT JOIN [Courts] AS [c] ON [s0].[SportId] = [c].[SportsSportId]
+) AS [t] ON [s].[StadiumId] = [t].[StadiumsStadiumId]
+ORDER BY [s].[StadiumId], [t].[SportId]
+2023-08-02 14:19:43.074 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Stadiums, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:19:43.104 +05:30 [INF] Executed action SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin) in 587.6596ms
+2023-08-02 14:19:43.104 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 14:19:43.104 +05:30 [INF] HTTP GET /api/Stadium/getallstadiums responded 200 in 1690.8346 ms
+2023-08-02 14:19:43.105 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - - - 200 - application/json;+charset=utf-8 1692.5962ms
+2023-08-02 14:19:43.120 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - -
+2023-08-02 14:19:43.120 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:19:43.122 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-08-2023 04:56:29', Current time (UTC): '02-08-2023 08:49:43'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-08-02 14:19:43.122 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-08-2023 04:56:29', Current time (UTC): '02-08-2023 08:49:43'.
+2023-08-02 14:19:43.122 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 14:19:43.123 +05:30 [INF] Route matched with {action = "GetAllStadiums", controller = "Stadium"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Stadiums] GetAllStadiums() on controller SportClubProject.AdminController.StadiumController (SportsClubAdmin).
+2023-08-02 14:19:43.123 +05:30 [INF] entered into get all stadiums method
+2023-08-02 14:19:43.123 +05:30 [INF] entered into get all stadiums method in stadium repository impl
+2023-08-02 14:19:43.160 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StadiumId], [s].[Location], [s].[StadiumName], [t].[SportId], [t].[SportImageUrl], [t].[SportName], [t].[StadiumsStadiumId], [t].[Status], [t].[CourtId], [t].[CourtImageUrl], [t].[CourtName], [t].[CourtPrice], [t].[SportsSportId], [t].[Status0], [t].[category]
+FROM [Stadiums] AS [s]
+LEFT JOIN (
+    SELECT [s0].[SportId], [s0].[SportImageUrl], [s0].[SportName], [s0].[StadiumsStadiumId], [s0].[Status], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status] AS [Status0], [c].[category]
+    FROM [Sports] AS [s0]
+    LEFT JOIN [Courts] AS [c] ON [s0].[SportId] = [c].[SportsSportId]
+) AS [t] ON [s].[StadiumId] = [t].[StadiumsStadiumId]
+ORDER BY [s].[StadiumId], [t].[SportId]
+2023-08-02 14:19:43.161 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Stadiums, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:19:43.169 +05:30 [INF] Executed action SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin) in 46.1438ms
+2023-08-02 14:19:43.169 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 14:19:43.169 +05:30 [INF] HTTP GET /api/Stadium/getallstadiums responded 200 in 49.2666 ms
+2023-08-02 14:19:43.169 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - - - 200 - application/json;+charset=utf-8 49.6111ms
+2023-08-02 14:19:46.637 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - -
+2023-08-02 14:19:46.638 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:19:46.639 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 14:19:46.639 +05:30 [INF] Route matched with {action = "GetAllStadiums", controller = "Stadium"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Stadiums] GetAllStadiums() on controller SportClubProject.AdminController.StadiumController (SportsClubAdmin).
+2023-08-02 14:19:46.639 +05:30 [INF] entered into get all stadiums method
+2023-08-02 14:19:46.639 +05:30 [INF] entered into get all stadiums method in stadium repository impl
+2023-08-02 14:19:46.645 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StadiumId], [s].[Location], [s].[StadiumName], [t].[SportId], [t].[SportImageUrl], [t].[SportName], [t].[StadiumsStadiumId], [t].[Status], [t].[CourtId], [t].[CourtImageUrl], [t].[CourtName], [t].[CourtPrice], [t].[SportsSportId], [t].[Status0], [t].[category]
+FROM [Stadiums] AS [s]
+LEFT JOIN (
+    SELECT [s0].[SportId], [s0].[SportImageUrl], [s0].[SportName], [s0].[StadiumsStadiumId], [s0].[Status], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status] AS [Status0], [c].[category]
+    FROM [Sports] AS [s0]
+    LEFT JOIN [Courts] AS [c] ON [s0].[SportId] = [c].[SportsSportId]
+) AS [t] ON [s].[StadiumId] = [t].[StadiumsStadiumId]
+ORDER BY [s].[StadiumId], [t].[SportId]
+2023-08-02 14:19:46.646 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Stadiums, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:19:46.647 +05:30 [INF] Executed action SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin) in 7.608ms
+2023-08-02 14:19:46.647 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 14:19:46.647 +05:30 [INF] HTTP GET /api/Stadium/getallstadiums responded 200 in 9.0199 ms
+2023-08-02 14:19:46.647 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - - - 200 - application/json;+charset=utf-8 9.4253ms

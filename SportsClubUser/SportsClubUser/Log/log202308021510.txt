@@ -1,0 +1,19 @@
+2023-08-02 15:10:00.870 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/api/Carts/getcarts?userId=NaN - -
+2023-08-02 15:10:00.881 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:10:00.882 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.CartsController.GetAllCarts (SportsClubUser)'
+2023-08-02 15:10:00.882 +05:30 [INF] Route matched with {action = "GetAllCarts", controller = "Carts"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Models.Cart]] GetAllCarts(Int32) on controller SportClubProject.UserControllers.CartsController (SportsClubUser).
+2023-08-02 15:10:00.885 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-02 15:10:00.890 +05:30 [INF] Executed action SportClubProject.UserControllers.CartsController.GetAllCarts (SportsClubUser) in 6.8803ms
+2023-08-02 15:10:00.890 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.CartsController.GetAllCarts (SportsClubUser)'
+2023-08-02 15:10:00.890 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/api/Carts/getcarts?userId=NaN - - - 400 - application/problem+json;+charset=utf-8 19.8423ms
+2023-08-02 15:10:35.895 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/getpayment - -
+2023-08-02 15:10:35.896 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:10:35.896 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.PaymentController.GetPayment (SportsClubUser)'
+2023-08-02 15:10:35.898 +05:30 [INF] Route matched with {action = "GetPayment", controller = "Payment"}. Executing controller action with signature System.Collections.Generic.List`1[Models.Payment] GetPayment() on controller SportClubProject.UserControllers.PaymentController (SportsClubUser).
+2023-08-02 15:10:35.946 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PaymentId], [p].[Amount], [p].[PaymentMode], [p].[Status], [p].[UserId]
+FROM [payments] AS [p]
+2023-08-02 15:10:35.955 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Payment, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 15:10:36.016 +05:30 [INF] Executed action SportClubProject.UserControllers.PaymentController.GetPayment (SportsClubUser) in 117.6795ms
+2023-08-02 15:10:36.016 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.PaymentController.GetPayment (SportsClubUser)'
+2023-08-02 15:10:36.016 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/getpayment - - - 200 - application/json;+charset=utf-8 120.9033ms

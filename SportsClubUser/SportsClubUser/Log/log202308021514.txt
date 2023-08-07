@@ -1,0 +1,19 @@
+2023-08-02 15:14:48.683 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/api/Carts/getcarts?userId=NaN - -
+2023-08-02 15:14:48.737 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:14:48.739 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.CartsController.GetAllCarts (SportsClubUser)'
+2023-08-02 15:14:48.741 +05:30 [INF] Route matched with {action = "GetAllCarts", controller = "Carts"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Models.Cart]] GetAllCarts(Int32) on controller SportClubProject.UserControllers.CartsController (SportsClubUser).
+2023-08-02 15:14:48.786 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-02 15:14:48.792 +05:30 [INF] Executed action SportClubProject.UserControllers.CartsController.GetAllCarts (SportsClubUser) in 49.8718ms
+2023-08-02 15:14:48.795 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.CartsController.GetAllCarts (SportsClubUser)'
+2023-08-02 15:14:48.796 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/api/Carts/getcarts?userId=NaN - - - 400 - application/problem+json;+charset=utf-8 113.0276ms
+2023-08-02 15:14:51.324 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/api/Sports/getsportbystadiumid?stadiumId=1 - -
+2023-08-02 15:14:51.325 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:14:51.349 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/api/Sports/getsportbystadiumid?stadiumId=1 - - - 404 - - 25.1669ms
+2023-08-02 15:14:53.991 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/api/Carts/getcarts?userId=NaN - -
+2023-08-02 15:14:53.991 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:14:53.991 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.CartsController.GetAllCarts (SportsClubUser)'
+2023-08-02 15:14:53.991 +05:30 [INF] Route matched with {action = "GetAllCarts", controller = "Carts"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Models.Cart]] GetAllCarts(Int32) on controller SportClubProject.UserControllers.CartsController (SportsClubUser).
+2023-08-02 15:14:53.992 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-08-02 15:14:53.994 +05:30 [INF] Executed action SportClubProject.UserControllers.CartsController.GetAllCarts (SportsClubUser) in 2.6918ms
+2023-08-02 15:14:53.994 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.CartsController.GetAllCarts (SportsClubUser)'
+2023-08-02 15:14:53.994 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/api/Carts/getcarts?userId=NaN - - - 400 - application/problem+json;+charset=utf-8 3.5473ms

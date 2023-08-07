@@ -1,0 +1,14 @@
+2023-08-02 14:30:09.283 +05:30 [INF] User profile is available. Using 'C:\Users\shiva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-02 14:30:10.886 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-02 14:30:10.972 +05:30 [INF] Hosting environment: Development
+2023-08-02 14:30:10.972 +05:30 [INF] Content root path: C:\Users\shiva\OneDrive\Desktop\SportclubFinal\SportsClubAdmin\SportsClubAdmin
+2023-08-02 14:30:11.078 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/swagger/index.html - -
+2023-08-02 14:30:12.534 +05:30 [INF] HTTP GET /swagger/index.html responded 200 in 1383.1794 ms
+2023-08-02 14:30:12.547 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/swagger/index.html - - - 200 - text/html;charset=utf-8 1478.3854ms
+2023-08-02 14:30:12.581 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/_framework/aspnetcore-browser-refresh.js - -
+2023-08-02 14:30:12.594 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/_framework/aspnetcore-browser-refresh.js - - - 200 12000 application/javascript;+charset=utf-8 8.7794ms
+2023-08-02 14:30:12.620 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/_vs/browserLink - -
+2023-08-02 14:30:12.679 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.7372ms
+2023-08-02 14:30:12.917 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/swagger/v1/swagger.json - -
+2023-08-02 14:30:13.078 +05:30 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 161.5964 ms
+2023-08-02 14:30:13.080 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 163.4820ms

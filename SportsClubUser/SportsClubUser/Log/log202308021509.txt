@@ -1,0 +1,77 @@
+2023-08-02 15:09:06.747 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/api/Sports/getsportbystadiumid?stadiumId=1 - -
+2023-08-02 15:09:06.776 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:09:06.783 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/api/Sports/getsportbystadiumid?stadiumId=1 - - - 404 - - 36.3846ms
+2023-08-02 15:09:20.222 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/api/Carts/getcarts?userId=1 - -
+2023-08-02 15:09:20.222 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:09:20.222 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.CartsController.GetAllCarts (SportsClubUser)'
+2023-08-02 15:09:20.223 +05:30 [INF] Route matched with {action = "GetAllCarts", controller = "Carts"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Models.Cart]] GetAllCarts(Int32) on controller SportClubProject.UserControllers.CartsController (SportsClubUser).
+2023-08-02 15:09:20.224 +05:30 [INF] entered into get carts method in carts controller
+2023-08-02 15:09:20.224 +05:30 [INF] entered into get all carts method in carts repo impl
+2023-08-02 15:09:20.242 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CartId], [c].[CourtImageurl], [c].[CourtName], [c].[Price], [c].[SlotTime], [c].[SportName], [c].[UserId]
+FROM [Carts] AS [c]
+WHERE [c].[UserId] = @__userId_0
+2023-08-02 15:09:20.252 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Cart, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 15:09:20.254 +05:30 [INF] Executed action SportClubProject.UserControllers.CartsController.GetAllCarts (SportsClubUser) in 31.4343ms
+2023-08-02 15:09:20.254 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.CartsController.GetAllCarts (SportsClubUser)'
+2023-08-02 15:09:20.254 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/api/Carts/getcarts?userId=1 - - - 200 - application/json;+charset=utf-8 32.1927ms
+2023-08-02 15:09:23.017 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/api/Sports/getsportbystadiumid?stadiumId=1 - -
+2023-08-02 15:09:23.017 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:09:23.018 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/api/Sports/getsportbystadiumid?stadiumId=1 - - - 404 - - 0.8916ms
+2023-08-02 15:09:35.435 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/api/Courts/getcourts?SportName=TableTennis&Date=function%20getDate()%20{%20[native%20code]%20} - -
+2023-08-02 15:09:35.435 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:09:35.435 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.CourtsController.GetAllCourts (SportsClubUser)'
+2023-08-02 15:09:35.436 +05:30 [INF] Route matched with {action = "GetAllCourts", controller = "Courts"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Models.Courts]] GetAllCourts(System.String, System.String) on controller SportClubProject.UserControllers.CourtsController (SportsClubUser).
+2023-08-02 15:09:35.436 +05:30 [INF] entered into get all courts method in courts controller
+2023-08-02 15:09:35.436 +05:30 [INF] entered into get all courts method in courts repo impl
+2023-08-02 15:09:35.441 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__sportname_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SportId], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status], [c].[category]
+FROM [Sports] AS [s]
+LEFT JOIN [Courts] AS [c] ON [s].[SportId] = [c].[SportsSportId]
+WHERE [s].[SportName] = @__sportname_0
+ORDER BY [s].[SportId]
+2023-08-02 15:09:35.445 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__sportname_0='?' (Size = 4000), @__date_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[CourtName]
+FROM [BookingDetails] AS [b]
+WHERE [b].[SportName] = @__sportname_0 AND [b].[Bookingdate] = @__date_1
+2023-08-02 15:09:35.445 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Courts, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 15:09:35.446 +05:30 [INF] Executed action SportClubProject.UserControllers.CourtsController.GetAllCourts (SportsClubUser) in 10.541ms
+2023-08-02 15:09:35.446 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.CourtsController.GetAllCourts (SportsClubUser)'
+2023-08-02 15:09:35.447 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/api/Courts/getcourts?SportName=TableTennis&Date=function%20getDate()%20{%20[native%20code]%20} - - - 200 - application/json;+charset=utf-8 11.4065ms
+2023-08-02 15:09:35.676 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/api/Courts/getcourts?SportName=TableTennis&Date=function%20getDate()%20{%20[native%20code]%20} - -
+2023-08-02 15:09:35.676 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:09:35.676 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.CourtsController.GetAllCourts (SportsClubUser)'
+2023-08-02 15:09:35.677 +05:30 [INF] Route matched with {action = "GetAllCourts", controller = "Courts"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Models.Courts]] GetAllCourts(System.String, System.String) on controller SportClubProject.UserControllers.CourtsController (SportsClubUser).
+2023-08-02 15:09:35.677 +05:30 [INF] entered into get all courts method in courts controller
+2023-08-02 15:09:35.677 +05:30 [INF] entered into get all courts method in courts repo impl
+2023-08-02 15:09:35.681 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__sportname_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SportId], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status], [c].[category]
+FROM [Sports] AS [s]
+LEFT JOIN [Courts] AS [c] ON [s].[SportId] = [c].[SportsSportId]
+WHERE [s].[SportName] = @__sportname_0
+ORDER BY [s].[SportId]
+2023-08-02 15:09:35.687 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__sportname_0='?' (Size = 4000), @__date_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[CourtName]
+FROM [BookingDetails] AS [b]
+WHERE [b].[SportName] = @__sportname_0 AND [b].[Bookingdate] = @__date_1
+2023-08-02 15:09:35.687 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Courts, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 15:09:35.688 +05:30 [INF] Executed action SportClubProject.UserControllers.CourtsController.GetAllCourts (SportsClubUser) in 11.4083ms
+2023-08-02 15:09:35.688 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.CourtsController.GetAllCourts (SportsClubUser)'
+2023-08-02 15:09:35.688 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/api/Courts/getcourts?SportName=TableTennis&Date=function%20getDate()%20{%20[native%20code]%20} - - - 200 - application/json;+charset=utf-8 12.2144ms
+2023-08-02 15:09:37.290 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:55225/api/Slots/getslots?sportname=cricket&date=3/07/2023&courtname=TableTennisCourt1 - -
+2023-08-02 15:09:37.290 +05:30 [INF] CORS policy execution successful.
+2023-08-02 15:09:37.290 +05:30 [INF] Executing endpoint 'SportClubProject.UserControllers.SlotsController.GetAllSlots (SportsClubUser)'
+2023-08-02 15:09:37.290 +05:30 [INF] Route matched with {action = "GetAllSlots", controller = "Slots"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[System.String]] GetAllSlots(System.String, System.String, System.String) on controller SportClubProject.UserControllers.SlotsController (SportsClubUser).
+2023-08-02 15:09:37.290 +05:30 [INF] entered into get all slots method in slots controller
+2023-08-02 15:09:37.290 +05:30 [INF] entered into get slots method in slot repo impl
+2023-08-02 15:09:37.296 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SlotTime]
+FROM [Slots] AS [s]
+2023-08-02 15:09:37.298 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__sportname_0='?' (Size = 4000), @__date_1='?' (Size = 4000), @__courtname_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[SlotTime]
+FROM [BookingDetails] AS [b]
+WHERE [b].[SportName] = @__sportname_0 AND [b].[Bookingdate] = @__date_1 AND [b].[CourtName] = @__courtname_2
+2023-08-02 15:09:37.298 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-02 15:09:37.299 +05:30 [INF] Executed action SportClubProject.UserControllers.SlotsController.GetAllSlots (SportsClubUser) in 9.1157ms
+2023-08-02 15:09:37.299 +05:30 [INF] Executed endpoint 'SportClubProject.UserControllers.SlotsController.GetAllSlots (SportsClubUser)'
+2023-08-02 15:09:37.299 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:55225/api/Slots/getslots?sportname=cricket&date=3/07/2023&courtname=TableTennisCourt1 - - - 200 - application/json;+charset=utf-8 9.6903ms

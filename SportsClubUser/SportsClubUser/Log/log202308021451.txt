@@ -1,0 +1,32 @@
+2023-08-02 14:51:14.865 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:55225/api/User/saveuser application/json 182
+2023-08-02 14:51:14.880 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:51:14.880 +05:30 [INF] Executing endpoint 'SportClubProject.Controllers.UserController.SaveUser (SportsClubUser)'
+2023-08-02 14:51:14.880 +05:30 [INF] Route matched with {action = "SaveUser", controller = "User"}. Executing controller action with signature Models.UserDetails SaveUser(Models.UserDetails) on controller SportClubProject.Controllers.UserController (SportsClubUser).
+2023-08-02 14:51:14.885 +05:30 [INF] entered into save user method in user controller
+2023-08-02 14:51:14.885 +05:30 [INF] entered into save user details method in user repository impl
+2023-08-02 14:51:14.901 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (DbType = Int64), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserDetails] ([Email], [Gender], [Password], [Role], [UserAge], [UserMobile], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2023-08-02 14:51:14.901 +05:30 [INF] Executing ObjectResult, writing value of type 'Models.UserDetails'.
+2023-08-02 14:51:14.902 +05:30 [INF] Executed action SportClubProject.Controllers.UserController.SaveUser (SportsClubUser) in 17.6894ms
+2023-08-02 14:51:14.902 +05:30 [INF] Executed endpoint 'SportClubProject.Controllers.UserController.SaveUser (SportsClubUser)'
+2023-08-02 14:51:14.902 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:55225/api/User/saveuser application/json 182 - 200 - application/json;+charset=utf-8 37.2036ms
+2023-08-02 14:51:39.603 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:55225/api/User/saveuser application/json 181
+2023-08-02 14:51:39.604 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:51:39.604 +05:30 [INF] Executing endpoint 'SportClubProject.Controllers.UserController.SaveUser (SportsClubUser)'
+2023-08-02 14:51:39.604 +05:30 [INF] Route matched with {action = "SaveUser", controller = "User"}. Executing controller action with signature Models.UserDetails SaveUser(Models.UserDetails) on controller SportClubProject.Controllers.UserController (SportsClubUser).
+2023-08-02 14:51:39.605 +05:30 [INF] entered into save user method in user controller
+2023-08-02 14:51:39.605 +05:30 [INF] entered into save user details method in user repository impl
+2023-08-02 14:51:39.611 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int32), @p5='?' (DbType = Int64), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [UserDetails] ([Email], [Gender], [Password], [Role], [UserAge], [UserMobile], [UserName])
+OUTPUT INSERTED.[UserId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2023-08-02 14:51:39.611 +05:30 [INF] Executing ObjectResult, writing value of type 'Models.UserDetails'.
+2023-08-02 14:51:39.612 +05:30 [INF] Executed action SportClubProject.Controllers.UserController.SaveUser (SportsClubUser) in 7.602ms
+2023-08-02 14:51:39.612 +05:30 [INF] Executed endpoint 'SportClubProject.Controllers.UserController.SaveUser (SportsClubUser)'
+2023-08-02 14:51:39.612 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:55225/api/User/saveuser application/json 181 - 200 - application/json;+charset=utf-8 9.0850ms

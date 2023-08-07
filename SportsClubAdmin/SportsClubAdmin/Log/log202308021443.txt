@@ -1,0 +1,360 @@
+2023-08-02 14:43:02.018 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getrevenue - -
+2023-08-02 14:43:02.030 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:02.030 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetRevenue (SportsClubAdmin)'
+2023-08-02 14:43:02.030 +05:30 [INF] Route matched with {action = "GetRevenue", controller = "DashBoard"}. Executing controller action with signature Double GetRevenue() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:02.030 +05:30 [INF] entered get revenue method in dashboard controller
+2023-08-02 14:43:02.030 +05:30 [INF] entered into revenue genarated method in dashboard repo impl  
+2023-08-02 14:43:02.038 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0E0)
+FROM [payments] AS [p]
+2023-08-02 14:43:02.039 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Double'.
+2023-08-02 14:43:02.044 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetRevenue (SportsClubAdmin) in 13.9401ms
+2023-08-02 14:43:02.044 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetRevenue (SportsClubAdmin)'
+2023-08-02 14:43:02.044 +05:30 [INF] HTTP GET /api/DashBoard/getrevenue responded 200 in 14.4945 ms
+2023-08-02 14:43:02.044 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getrevenue - - - 200 - application/json;+charset=utf-8 26.7794ms
+2023-08-02 14:43:02.070 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - -
+2023-08-02 14:43:02.070 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:02.070 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 14:43:02.070 +05:30 [INF] Route matched with {action = "GetAllStadiums", controller = "Stadium"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Stadiums] GetAllStadiums() on controller SportClubProject.AdminController.StadiumController (SportsClubAdmin).
+2023-08-02 14:43:02.070 +05:30 [INF] entered into get all stadiums method
+2023-08-02 14:43:02.071 +05:30 [INF] entered into get all stadiums method in stadium repository impl
+2023-08-02 14:43:02.074 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getbookings - -
+2023-08-02 14:43:02.075 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:02.075 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin)'
+2023-08-02 14:43:02.075 +05:30 [INF] Route matched with {action = "GetBookingDetails", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.BookingDetails] GetBookingDetails() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:02.075 +05:30 [INF] enterded get booking details method
+2023-08-02 14:43:02.075 +05:30 [INF] entered into get booking details in dash board repo impl
+2023-08-02 14:43:02.076 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StadiumId], [s].[Location], [s].[StadiumName], [t].[SportId], [t].[SportImageUrl], [t].[SportName], [t].[StadiumsStadiumId], [t].[Status], [t].[CourtId], [t].[CourtImageUrl], [t].[CourtName], [t].[CourtPrice], [t].[SportsSportId], [t].[Status0], [t].[category]
+FROM [Stadiums] AS [s]
+LEFT JOIN (
+    SELECT [s0].[SportId], [s0].[SportImageUrl], [s0].[SportName], [s0].[StadiumsStadiumId], [s0].[Status], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status] AS [Status0], [c].[category]
+    FROM [Sports] AS [s0]
+    LEFT JOIN [Courts] AS [c] ON [s0].[SportId] = [c].[SportsSportId]
+) AS [t] ON [s].[StadiumId] = [t].[StadiumsStadiumId]
+ORDER BY [s].[StadiumId], [t].[SportId]
+2023-08-02 14:43:02.076 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Stadiums, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:02.077 +05:30 [INF] Executed action SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin) in 6.6601ms
+2023-08-02 14:43:02.077 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 14:43:02.077 +05:30 [INF] HTTP GET /api/Stadium/getallstadiums responded 200 in 6.9624 ms
+2023-08-02 14:43:02.077 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - - - 200 - application/json;+charset=utf-8 7.2192ms
+2023-08-02 14:43:02.081 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[Bookingdate], [b].[CourtName], [b].[SlotTime], [b].[SportName], [b].[UserId]
+FROM [BookingDetails] AS [b]
+2023-08-02 14:43:02.081 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.BookingDetails, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:02.082 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin) in 6.7025ms
+2023-08-02 14:43:02.082 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin)'
+2023-08-02 14:43:02.082 +05:30 [INF] HTTP GET /api/DashBoard/getbookings responded 200 in 7.1867 ms
+2023-08-02 14:43:02.082 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getbookings - - - 200 - application/json;+charset=utf-8 7.6135ms
+2023-08-02 14:43:02.083 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Sports/getallsports - -
+2023-08-02 14:43:02.083 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:02.083 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.SportsController.GetAllSports (SportsClubAdmin)'
+2023-08-02 14:43:02.083 +05:30 [INF] Route matched with {action = "GetAllSports", controller = "Sports"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Sports] GetAllSports() on controller SportClubProject.AdminController.SportsController (SportsClubAdmin).
+2023-08-02 14:43:02.083 +05:30 [INF] entered into get all sports method
+2023-08-02 14:43:02.083 +05:30 [INF] entered into get all sports method in sports repository impl
+2023-08-02 14:43:02.085 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Courts/getallcourts - -
+2023-08-02 14:43:02.085 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:02.086 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.CourtsController.GetAllCourts (SportsClubAdmin)'
+2023-08-02 14:43:02.086 +05:30 [INF] Route matched with {action = "GetAllCourts", controller = "Courts"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Courts] GetAllCourts() on controller SportClubProject.AdminController.CourtsController (SportsClubAdmin).
+2023-08-02 14:43:02.086 +05:30 [INF] entered get all courts method
+2023-08-02 14:43:02.086 +05:30 [INF] entered into get all courts method in courts repository impl
+2023-08-02 14:43:02.090 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getusers - -
+2023-08-02 14:43:02.090 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SportId], [s].[SportImageUrl], [s].[SportName], [s].[StadiumsStadiumId], [s].[Status], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status], [c].[category]
+FROM [Sports] AS [s]
+LEFT JOIN [Courts] AS [c] ON [s].[SportId] = [c].[SportsSportId]
+ORDER BY [s].[SportId]
+2023-08-02 14:43:02.090 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Sports, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:02.090 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:02.091 +05:30 [INF] Executed action SportClubProject.AdminController.SportsController.GetAllSports (SportsClubAdmin) in 8.3087ms
+2023-08-02 14:43:02.091 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.SportsController.GetAllSports (SportsClubAdmin)'
+2023-08-02 14:43:02.092 +05:30 [INF] HTTP GET /api/Sports/getallsports responded 200 in 8.6160 ms
+2023-08-02 14:43:02.092 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Sports/getallsports - - - 200 - application/json;+charset=utf-8 9.1538ms
+2023-08-02 14:43:02.095 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetUserDetails (SportsClubAdmin)'
+2023-08-02 14:43:02.095 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.UserDetails] GetUserDetails() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:02.095 +05:30 [INF] enterd get user details method
+2023-08-02 14:43:02.095 +05:30 [INF] entered into get user details method in dash board repo impl
+2023-08-02 14:43:02.097 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status], [c].[category]
+FROM [Courts] AS [c]
+2023-08-02 14:43:02.098 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Courts, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:02.098 +05:30 [INF] Executed action SportClubProject.AdminController.CourtsController.GetAllCourts (SportsClubAdmin) in 12.5238ms
+2023-08-02 14:43:02.098 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.CourtsController.GetAllCourts (SportsClubAdmin)'
+2023-08-02 14:43:02.098 +05:30 [INF] HTTP GET /api/Courts/getallcourts responded 200 in 12.8768 ms
+2023-08-02 14:43:02.098 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Courts/getallcourts - - - 200 - application/json;+charset=utf-8 13.1478ms
+2023-08-02 14:43:02.100 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[Gender], [u].[Password], [u].[Role], [u].[UserAge], [u].[UserMobile], [u].[UserName]
+FROM [UserDetails] AS [u]
+2023-08-02 14:43:02.100 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.UserDetails, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:02.100 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/bookingspermonth - -
+2023-08-02 14:43:02.101 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:02.101 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.getbookingspermonth (SportsClubAdmin)'
+2023-08-02 14:43:02.101 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetUserDetails (SportsClubAdmin) in 5.7542ms
+2023-08-02 14:43:02.101 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetUserDetails (SportsClubAdmin)'
+2023-08-02 14:43:02.101 +05:30 [INF] Route matched with {action = "getbookingspermonth", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.List`1[System.Int32] getbookingspermonth() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:02.101 +05:30 [INF] HTTP GET /api/DashBoard/getusers responded 200 in 11.1143 ms
+2023-08-02 14:43:02.101 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getusers - - - 200 - application/json;+charset=utf-8 11.4381ms
+2023-08-02 14:43:02.101 +05:30 [INF] enterd get bookings details method
+2023-08-02 14:43:02.101 +05:30 [INF] entered into get getcourtscount method in dash board repo impl
+2023-08-02 14:43:02.102 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[Bookingdate], [b].[CourtName], [b].[SlotTime], [b].[SportName], [b].[UserId]
+FROM [BookingDetails] AS [b]
+2023-08-02 14:43:02.102 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-02 14:43:02.103 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.getbookingspermonth (SportsClubAdmin) in 1.7763ms
+2023-08-02 14:43:02.103 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.getbookingspermonth (SportsClubAdmin)'
+2023-08-02 14:43:02.103 +05:30 [INF] HTTP GET /api/DashBoard/bookingspermonth responded 200 in 2.2723 ms
+2023-08-02 14:43:02.103 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/bookingspermonth - - - 200 - application/json;+charset=utf-8 2.4786ms
+2023-08-02 14:43:02.106 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getbookings - -
+2023-08-02 14:43:02.111 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:02.111 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin)'
+2023-08-02 14:43:02.111 +05:30 [INF] Route matched with {action = "GetBookingDetails", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.BookingDetails] GetBookingDetails() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:02.112 +05:30 [INF] enterded get booking details method
+2023-08-02 14:43:02.112 +05:30 [INF] entered into get booking details in dash board repo impl
+2023-08-02 14:43:02.114 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[Bookingdate], [b].[CourtName], [b].[SlotTime], [b].[SportName], [b].[UserId]
+FROM [BookingDetails] AS [b]
+2023-08-02 14:43:02.115 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.BookingDetails, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:02.115 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin) in 3.8425ms
+2023-08-02 14:43:02.115 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin)'
+2023-08-02 14:43:02.115 +05:30 [INF] HTTP GET /api/DashBoard/getbookings responded 200 in 8.8704 ms
+2023-08-02 14:43:02.115 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getbookings - - - 200 - application/json;+charset=utf-8 9.1118ms
+2023-08-02 14:43:04.130 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getrevenue - -
+2023-08-02 14:43:04.130 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:04.130 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetRevenue (SportsClubAdmin)'
+2023-08-02 14:43:04.130 +05:30 [INF] Route matched with {action = "GetRevenue", controller = "DashBoard"}. Executing controller action with signature Double GetRevenue() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:04.130 +05:30 [INF] entered get revenue method in dashboard controller
+2023-08-02 14:43:04.130 +05:30 [INF] entered into revenue genarated method in dashboard repo impl  
+2023-08-02 14:43:04.134 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - -
+2023-08-02 14:43:04.134 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:04.135 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 14:43:04.135 +05:30 [INF] Route matched with {action = "GetAllStadiums", controller = "Stadium"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Stadiums] GetAllStadiums() on controller SportClubProject.AdminController.StadiumController (SportsClubAdmin).
+2023-08-02 14:43:04.135 +05:30 [INF] entered into get all stadiums method
+2023-08-02 14:43:04.135 +05:30 [INF] entered into get all stadiums method in stadium repository impl
+2023-08-02 14:43:04.135 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0E0)
+FROM [payments] AS [p]
+2023-08-02 14:43:04.136 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Double'.
+2023-08-02 14:43:04.138 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StadiumId], [s].[Location], [s].[StadiumName], [t].[SportId], [t].[SportImageUrl], [t].[SportName], [t].[StadiumsStadiumId], [t].[Status], [t].[CourtId], [t].[CourtImageUrl], [t].[CourtName], [t].[CourtPrice], [t].[SportsSportId], [t].[Status0], [t].[category]
+FROM [Stadiums] AS [s]
+LEFT JOIN (
+    SELECT [s0].[SportId], [s0].[SportImageUrl], [s0].[SportName], [s0].[StadiumsStadiumId], [s0].[Status], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status] AS [Status0], [c].[category]
+    FROM [Sports] AS [s0]
+    LEFT JOIN [Courts] AS [c] ON [s0].[SportId] = [c].[SportsSportId]
+) AS [t] ON [s].[StadiumId] = [t].[StadiumsStadiumId]
+ORDER BY [s].[StadiumId], [t].[SportId]
+2023-08-02 14:43:04.138 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Stadiums, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:04.139 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetRevenue (SportsClubAdmin) in 7.6348ms
+2023-08-02 14:43:04.139 +05:30 [INF] Executed action SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin) in 4.1913ms
+2023-08-02 14:43:04.139 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetRevenue (SportsClubAdmin)'
+2023-08-02 14:43:04.139 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 14:43:04.139 +05:30 [INF] HTTP GET /api/Stadium/getallstadiums responded 200 in 4.6099 ms
+2023-08-02 14:43:04.139 +05:30 [INF] HTTP GET /api/DashBoard/getrevenue responded 200 in 9.1651 ms
+2023-08-02 14:43:04.139 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - - - 200 - application/json;+charset=utf-8 4.8912ms
+2023-08-02 14:43:04.139 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getrevenue - - - 200 - application/json;+charset=utf-8 9.4500ms
+2023-08-02 14:43:04.145 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getbookings - -
+2023-08-02 14:43:04.145 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:04.145 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin)'
+2023-08-02 14:43:04.145 +05:30 [INF] Route matched with {action = "GetBookingDetails", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.BookingDetails] GetBookingDetails() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:04.145 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Sports/getallsports - -
+2023-08-02 14:43:04.146 +05:30 [INF] enterded get booking details method
+2023-08-02 14:43:04.146 +05:30 [INF] entered into get booking details in dash board repo impl
+2023-08-02 14:43:04.146 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:04.146 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.SportsController.GetAllSports (SportsClubAdmin)'
+2023-08-02 14:43:04.146 +05:30 [INF] Route matched with {action = "GetAllSports", controller = "Sports"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Sports] GetAllSports() on controller SportClubProject.AdminController.SportsController (SportsClubAdmin).
+2023-08-02 14:43:04.146 +05:30 [INF] entered into get all sports method
+2023-08-02 14:43:04.146 +05:30 [INF] entered into get all sports method in sports repository impl
+2023-08-02 14:43:04.147 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Courts/getallcourts - -
+2023-08-02 14:43:04.147 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:04.147 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.CourtsController.GetAllCourts (SportsClubAdmin)'
+2023-08-02 14:43:04.147 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[Bookingdate], [b].[CourtName], [b].[SlotTime], [b].[SportName], [b].[UserId]
+FROM [BookingDetails] AS [b]
+2023-08-02 14:43:04.147 +05:30 [INF] Route matched with {action = "GetAllCourts", controller = "Courts"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Courts] GetAllCourts() on controller SportClubProject.AdminController.CourtsController (SportsClubAdmin).
+2023-08-02 14:43:04.148 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.BookingDetails, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:04.148 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin) in 2.9533ms
+2023-08-02 14:43:04.148 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin)'
+2023-08-02 14:43:04.148 +05:30 [INF] HTTP GET /api/DashBoard/getbookings responded 200 in 3.3769 ms
+2023-08-02 14:43:04.149 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getbookings - - - 200 - application/json;+charset=utf-8 3.7309ms
+2023-08-02 14:43:04.149 +05:30 [INF] entered get all courts method
+2023-08-02 14:43:04.149 +05:30 [INF] entered into get all courts method in courts repository impl
+2023-08-02 14:43:04.152 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SportId], [s].[SportImageUrl], [s].[SportName], [s].[StadiumsStadiumId], [s].[Status], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status], [c].[category]
+FROM [Sports] AS [s]
+LEFT JOIN [Courts] AS [c] ON [s].[SportId] = [c].[SportsSportId]
+ORDER BY [s].[SportId]
+2023-08-02 14:43:04.152 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getusers - -
+2023-08-02 14:43:04.152 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Sports, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:04.153 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:04.153 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetUserDetails (SportsClubAdmin)'
+2023-08-02 14:43:04.153 +05:30 [INF] Executed action SportClubProject.AdminController.SportsController.GetAllSports (SportsClubAdmin) in 7.272ms
+2023-08-02 14:43:04.153 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.SportsController.GetAllSports (SportsClubAdmin)'
+2023-08-02 14:43:04.153 +05:30 [INF] HTTP GET /api/Sports/getallsports responded 200 in 7.6079 ms
+2023-08-02 14:43:04.153 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status], [c].[category]
+FROM [Courts] AS [c]
+2023-08-02 14:43:04.153 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.UserDetails] GetUserDetails() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:04.153 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Sports/getallsports - - - 200 - application/json;+charset=utf-8 7.7923ms
+2023-08-02 14:43:04.153 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Courts, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:04.153 +05:30 [INF] enterd get user details method
+2023-08-02 14:43:04.153 +05:30 [INF] entered into get user details method in dash board repo impl
+2023-08-02 14:43:04.154 +05:30 [INF] Executed action SportClubProject.AdminController.CourtsController.GetAllCourts (SportsClubAdmin) in 6.1917ms
+2023-08-02 14:43:04.154 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.CourtsController.GetAllCourts (SportsClubAdmin)'
+2023-08-02 14:43:04.154 +05:30 [INF] HTTP GET /api/Courts/getallcourts responded 200 in 6.5299 ms
+2023-08-02 14:43:04.154 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Courts/getallcourts - - - 200 - application/json;+charset=utf-8 6.7563ms
+2023-08-02 14:43:04.156 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[Gender], [u].[Password], [u].[Role], [u].[UserAge], [u].[UserMobile], [u].[UserName]
+FROM [UserDetails] AS [u]
+2023-08-02 14:43:04.156 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.UserDetails, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:04.157 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetUserDetails (SportsClubAdmin) in 3.4913ms
+2023-08-02 14:43:04.157 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetUserDetails (SportsClubAdmin)'
+2023-08-02 14:43:04.157 +05:30 [INF] HTTP GET /api/DashBoard/getusers responded 200 in 4.6210 ms
+2023-08-02 14:43:04.157 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getusers - - - 200 - application/json;+charset=utf-8 5.0625ms
+2023-08-02 14:43:04.159 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/bookingspermonth - -
+2023-08-02 14:43:04.160 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:04.160 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.getbookingspermonth (SportsClubAdmin)'
+2023-08-02 14:43:04.160 +05:30 [INF] Route matched with {action = "getbookingspermonth", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.List`1[System.Int32] getbookingspermonth() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:04.160 +05:30 [INF] enterd get bookings details method
+2023-08-02 14:43:04.160 +05:30 [INF] entered into get getcourtscount method in dash board repo impl
+2023-08-02 14:43:04.160 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getbookings - -
+2023-08-02 14:43:04.160 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:04.160 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin)'
+2023-08-02 14:43:04.160 +05:30 [INF] Route matched with {action = "GetBookingDetails", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.BookingDetails] GetBookingDetails() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:04.160 +05:30 [INF] enterded get booking details method
+2023-08-02 14:43:04.160 +05:30 [INF] entered into get booking details in dash board repo impl
+2023-08-02 14:43:04.161 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[Bookingdate], [b].[CourtName], [b].[SlotTime], [b].[SportName], [b].[UserId]
+FROM [BookingDetails] AS [b]
+2023-08-02 14:43:04.161 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[Bookingdate], [b].[CourtName], [b].[SlotTime], [b].[SportName], [b].[UserId]
+FROM [BookingDetails] AS [b]
+2023-08-02 14:43:04.161 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-02 14:43:04.162 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.BookingDetails, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:04.162 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin) in 1.6887ms
+2023-08-02 14:43:04.162 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.getbookingspermonth (SportsClubAdmin) in 2.189ms
+2023-08-02 14:43:04.162 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin)'
+2023-08-02 14:43:04.162 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.getbookingspermonth (SportsClubAdmin)'
+2023-08-02 14:43:04.162 +05:30 [INF] HTTP GET /api/DashBoard/bookingspermonth responded 200 in 2.5231 ms
+2023-08-02 14:43:04.162 +05:30 [INF] HTTP GET /api/DashBoard/getbookings responded 200 in 1.9590 ms
+2023-08-02 14:43:04.162 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getbookings - - - 200 - application/json;+charset=utf-8 2.1460ms
+2023-08-02 14:43:04.162 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/bookingspermonth - - - 200 - application/json;+charset=utf-8 3.0558ms
+2023-08-02 14:43:05.960 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getrevenue - -
+2023-08-02 14:43:05.961 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:05.961 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetRevenue (SportsClubAdmin)'
+2023-08-02 14:43:05.961 +05:30 [INF] Route matched with {action = "GetRevenue", controller = "DashBoard"}. Executing controller action with signature Double GetRevenue() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:05.961 +05:30 [INF] entered get revenue method in dashboard controller
+2023-08-02 14:43:05.961 +05:30 [INF] entered into revenue genarated method in dashboard repo impl  
+2023-08-02 14:43:05.963 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - -
+2023-08-02 14:43:05.963 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:05.963 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 14:43:05.964 +05:30 [INF] Route matched with {action = "GetAllStadiums", controller = "Stadium"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Stadiums] GetAllStadiums() on controller SportClubProject.AdminController.StadiumController (SportsClubAdmin).
+2023-08-02 14:43:05.965 +05:30 [INF] entered into get all stadiums method
+2023-08-02 14:43:05.965 +05:30 [INF] entered into get all stadiums method in stadium repository impl
+2023-08-02 14:43:05.966 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COALESCE(SUM([p].[Amount]), 0.0E0)
+FROM [payments] AS [p]
+2023-08-02 14:43:05.966 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Double'.
+2023-08-02 14:43:05.967 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetRevenue (SportsClubAdmin) in 6.122ms
+2023-08-02 14:43:05.967 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetRevenue (SportsClubAdmin)'
+2023-08-02 14:43:05.967 +05:30 [INF] HTTP GET /api/DashBoard/getrevenue responded 200 in 6.4501 ms
+2023-08-02 14:43:05.967 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getrevenue - - - 200 - application/json;+charset=utf-8 6.7575ms
+2023-08-02 14:43:05.967 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StadiumId], [s].[Location], [s].[StadiumName], [t].[SportId], [t].[SportImageUrl], [t].[SportName], [t].[StadiumsStadiumId], [t].[Status], [t].[CourtId], [t].[CourtImageUrl], [t].[CourtName], [t].[CourtPrice], [t].[SportsSportId], [t].[Status0], [t].[category]
+FROM [Stadiums] AS [s]
+LEFT JOIN (
+    SELECT [s0].[SportId], [s0].[SportImageUrl], [s0].[SportName], [s0].[StadiumsStadiumId], [s0].[Status], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status] AS [Status0], [c].[category]
+    FROM [Sports] AS [s0]
+    LEFT JOIN [Courts] AS [c] ON [s0].[SportId] = [c].[SportsSportId]
+) AS [t] ON [s].[StadiumId] = [t].[StadiumsStadiumId]
+ORDER BY [s].[StadiumId], [t].[SportId]
+2023-08-02 14:43:05.968 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Stadiums, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:05.969 +05:30 [INF] Executed action SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin) in 3.62ms
+2023-08-02 14:43:05.969 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.StadiumController.GetAllStadiums (SportsClubAdmin)'
+2023-08-02 14:43:05.969 +05:30 [INF] HTTP GET /api/Stadium/getallstadiums responded 200 in 5.3945 ms
+2023-08-02 14:43:05.969 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Stadium/getallstadiums - - - 200 - application/json;+charset=utf-8 5.7358ms
+2023-08-02 14:43:05.970 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getbookings - -
+2023-08-02 14:43:05.970 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:05.970 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin)'
+2023-08-02 14:43:05.970 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Sports/getallsports - -
+2023-08-02 14:43:05.970 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:05.970 +05:30 [INF] Route matched with {action = "GetBookingDetails", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.BookingDetails] GetBookingDetails() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:05.970 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.SportsController.GetAllSports (SportsClubAdmin)'
+2023-08-02 14:43:05.970 +05:30 [INF] Route matched with {action = "GetAllSports", controller = "Sports"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Sports] GetAllSports() on controller SportClubProject.AdminController.SportsController (SportsClubAdmin).
+2023-08-02 14:43:05.971 +05:30 [INF] entered into get all sports method
+2023-08-02 14:43:05.971 +05:30 [INF] entered into get all sports method in sports repository impl
+2023-08-02 14:43:05.971 +05:30 [INF] enterded get booking details method
+2023-08-02 14:43:05.971 +05:30 [INF] entered into get booking details in dash board repo impl
+2023-08-02 14:43:05.971 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/Courts/getallcourts - -
+2023-08-02 14:43:05.971 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:05.971 +05:30 [INF] Executing endpoint 'SportClubProject.AdminController.CourtsController.GetAllCourts (SportsClubAdmin)'
+2023-08-02 14:43:05.971 +05:30 [INF] Route matched with {action = "GetAllCourts", controller = "Courts"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.Courts] GetAllCourts() on controller SportClubProject.AdminController.CourtsController (SportsClubAdmin).
+2023-08-02 14:43:05.971 +05:30 [INF] entered get all courts method
+2023-08-02 14:43:05.971 +05:30 [INF] entered into get all courts method in courts repository impl
+2023-08-02 14:43:05.972 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getusers - -
+2023-08-02 14:43:05.972 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:05.972 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetUserDetails (SportsClubAdmin)'
+2023-08-02 14:43:05.972 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.UserDetails] GetUserDetails() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:05.972 +05:30 [INF] enterd get user details method
+2023-08-02 14:43:05.972 +05:30 [INF] entered into get user details method in dash board repo impl
+2023-08-02 14:43:05.973 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status], [c].[category]
+FROM [Courts] AS [c]
+2023-08-02 14:43:05.974 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Courts, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:05.974 +05:30 [INF] Executed action SportClubProject.AdminController.CourtsController.GetAllCourts (SportsClubAdmin) in 3.4476ms
+2023-08-02 14:43:05.974 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.CourtsController.GetAllCourts (SportsClubAdmin)'
+2023-08-02 14:43:05.974 +05:30 [INF] HTTP GET /api/Courts/getallcourts responded 200 in 3.6759 ms
+2023-08-02 14:43:05.974 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[Bookingdate], [b].[CourtName], [b].[SlotTime], [b].[SportName], [b].[UserId]
+FROM [BookingDetails] AS [b]
+2023-08-02 14:43:05.975 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Courts/getallcourts - - - 200 - application/json;+charset=utf-8 3.8625ms
+2023-08-02 14:43:05.975 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.BookingDetails, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:05.975 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin) in 4.6113ms
+2023-08-02 14:43:05.975 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin)'
+2023-08-02 14:43:05.975 +05:30 [INF] HTTP GET /api/DashBoard/getbookings responded 200 in 4.9841 ms
+2023-08-02 14:43:05.975 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getbookings - - - 200 - application/json;+charset=utf-8 5.2336ms
+2023-08-02 14:43:05.976 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/bookingspermonth - -
+2023-08-02 14:43:05.976 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:05.976 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.getbookingspermonth (SportsClubAdmin)'
+2023-08-02 14:43:05.976 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[UserId], [u].[Email], [u].[Gender], [u].[Password], [u].[Role], [u].[UserAge], [u].[UserMobile], [u].[UserName]
+FROM [UserDetails] AS [u]
+2023-08-02 14:43:05.977 +05:30 [INF] Route matched with {action = "getbookingspermonth", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.List`1[System.Int32] getbookingspermonth() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:05.977 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.UserDetails, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:05.977 +05:30 [INF] enterd get bookings details method
+2023-08-02 14:43:05.977 +05:30 [INF] entered into get getcourtscount method in dash board repo impl
+2023-08-02 14:43:05.977 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SportId], [s].[SportImageUrl], [s].[SportName], [s].[StadiumsStadiumId], [s].[Status], [c].[CourtId], [c].[CourtImageUrl], [c].[CourtName], [c].[CourtPrice], [c].[SportsSportId], [c].[Status], [c].[category]
+FROM [Sports] AS [s]
+LEFT JOIN [Courts] AS [c] ON [s].[SportId] = [c].[SportsSportId]
+ORDER BY [s].[SportId]
+2023-08-02 14:43:05.977 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetUserDetails (SportsClubAdmin) in 5.2553ms
+2023-08-02 14:43:05.977 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetUserDetails (SportsClubAdmin)'
+2023-08-02 14:43:05.977 +05:30 [INF] HTTP GET /api/DashBoard/getusers responded 200 in 5.5426 ms
+2023-08-02 14:43:05.978 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.Sports, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:05.978 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getusers - - - 200 - application/json;+charset=utf-8 5.8963ms
+2023-08-02 14:43:05.978 +05:30 [INF] Executed action SportClubProject.AdminController.SportsController.GetAllSports (SportsClubAdmin) in 7.6851ms
+2023-08-02 14:43:05.978 +05:30 [INF] Executed endpoint 'SportClubProject.AdminController.SportsController.GetAllSports (SportsClubAdmin)'
+2023-08-02 14:43:05.978 +05:30 [INF] HTTP GET /api/Sports/getallsports responded 200 in 7.8923 ms
+2023-08-02 14:43:05.978 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[Bookingdate], [b].[CourtName], [b].[SlotTime], [b].[SportName], [b].[UserId]
+FROM [BookingDetails] AS [b]
+2023-08-02 14:43:05.978 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/Sports/getallsports - - - 200 - application/json;+charset=utf-8 8.0606ms
+2023-08-02 14:43:05.979 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-02 14:43:05.979 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.getbookingspermonth (SportsClubAdmin) in 2.4002ms
+2023-08-02 14:43:05.979 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.getbookingspermonth (SportsClubAdmin)'
+2023-08-02 14:43:05.979 +05:30 [INF] HTTP GET /api/DashBoard/bookingspermonth responded 200 in 2.8162 ms
+2023-08-02 14:43:05.979 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/bookingspermonth - - - 200 - application/json;+charset=utf-8 3.0439ms
+2023-08-02 14:43:05.981 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:10697/api/DashBoard/getbookings - -
+2023-08-02 14:43:05.981 +05:30 [INF] CORS policy execution successful.
+2023-08-02 14:43:05.981 +05:30 [INF] Executing endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin)'
+2023-08-02 14:43:05.981 +05:30 [INF] Route matched with {action = "GetBookingDetails", controller = "DashBoard"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Models.BookingDetails] GetBookingDetails() on controller SportsClubAdmin.AdminController.DashBoardController (SportsClubAdmin).
+2023-08-02 14:43:05.981 +05:30 [INF] enterded get booking details method
+2023-08-02 14:43:05.981 +05:30 [INF] entered into get booking details in dash board repo impl
+2023-08-02 14:43:05.982 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BookingId], [b].[Bookingdate], [b].[CourtName], [b].[SlotTime], [b].[SportName], [b].[UserId]
+FROM [BookingDetails] AS [b]
+2023-08-02 14:43:05.982 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Models.BookingDetails, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-08-02 14:43:05.983 +05:30 [INF] Executed action SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin) in 1.9202ms
+2023-08-02 14:43:05.983 +05:30 [INF] Executed endpoint 'SportsClubAdmin.AdminController.DashBoardController.GetBookingDetails (SportsClubAdmin)'
+2023-08-02 14:43:05.983 +05:30 [INF] HTTP GET /api/DashBoard/getbookings responded 200 in 2.2420 ms
+2023-08-02 14:43:05.983 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:10697/api/DashBoard/getbookings - - - 200 - application/json;+charset=utf-8 2.5075ms

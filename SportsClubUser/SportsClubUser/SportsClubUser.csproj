@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Twilio" Version="6.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\source\repos\SportsClub\SportClubLatest\Models\Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Models">
+      <HintPath>..\Models\bin\Debug\net6.0\Models.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
